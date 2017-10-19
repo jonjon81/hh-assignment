@@ -1,0 +1,63 @@
+.App {
+  padding: 48px;
+  min-height: 100vh; }
+  .App > .welcome-message {
+    font-size: 3vw;
+    margin-bottom: 12px;
+    color: #bfbfbf;
+    text-align: center;
+    font-weight: 200;
+    letter-spacing: 1px; }
+  .App > .task-message {
+    font-size: 4vw;
+    font-weight: 200;
+    letter-spacing: 1px;
+    text-align: center; }
+    .App > .task-message span {
+      color: red; }
+  .App > .data-container > header {
+    font-weight: bold;
+    margin: 12px 0; }
+  .App > .data-container > .container > .box.success {
+    color: green; }
+  .App > .data-container > .container > .box.error {
+    color: red; }
+  .App > .data-container > .container > .box > .lost {
+    color: #ff0000;
+    font-weight: bold; }
+  .App > form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 24px 0 0;
+    flex-direction: column; }
+    .App > form > input, .App > form button.submit {
+      border: 2px solid #577aff;
+      height: 50px;
+      padding: 0 25px;
+      font-size: 16px;
+      background: #fff;
+      border-radius: 4px;
+      margin-bottom: 16px;
+      width: 100%;
+      max-width: 300px; }
+
+@media (min-width: 961px) {
+  .App > .welcome-message {
+    margin-bottom: 24px; }
+  .App > form {
+    padding: 24px 0;
+    flex-direction: row; }
+    .App > form > input,
+    .App > form > button.submit {
+      margin-left: 12px;
+      margin-bottom: 0; }
+    .App > form > input:first-child {
+      margin-left: 0; }
+    .App > form > button.submit {
+      transition: all 250ms ease;
+      width: auto; }
+      .App > form > button.submit:hover {
+        cursor: pointer;
+        background: #577aff;
+        color: #fff; } }

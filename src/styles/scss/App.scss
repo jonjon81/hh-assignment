@@ -1,0 +1,92 @@
+@import 'include-media';
+
+.App {
+	padding: 48px;
+	min-height: 100vh;
+	> .welcome-message {
+		font-size: 3vw;
+		margin-bottom: 12px;
+		color: #bfbfbf;
+		text-align: center;
+		font-weight: 200;
+		letter-spacing: 1px;
+	}
+	> .task-message {
+		font-size: 4vw;
+		font-weight: 200;
+		letter-spacing: 1px;
+		text-align: center;
+		span {
+			color: red;
+		}
+	}
+	> .data-container {
+		> header {
+			font-weight: bold;
+			margin: 12px 0;
+		}
+		> .container {
+			> .box {
+				&.success {
+					color: green;
+				}
+				&.error {
+					color: red;
+				}
+				>.lost {
+					color: #ff0000;
+					font-weight: bold;
+				}
+			}
+		}
+	}
+	> form {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		margin: 24px 0 0;
+		flex-direction: column;
+		> input, button.submit {
+			border: 2px solid #577aff;
+			height: 50px;
+			padding: 0 25px;
+			font-size: 16px;
+			background: #fff;
+			border-radius: 4px;
+			margin-bottom: 16px;
+			width: 100%;
+			max-width: 300px;
+		}
+	}
+}
+
+@include media('>960px') {
+	.App {
+		> .welcome-message {
+			margin-bottom: 24px;
+		}
+		> form {
+			padding: 24px 0;
+			flex-direction: row;
+			> input,
+			> button.submit {
+				margin-left: 12px;
+				margin-bottom: 0;
+			}
+			> input {
+				&:first-child {
+					margin-left: 0;
+				}
+			}
+			> button.submit {
+				transition: all 250ms ease;
+				width: auto;
+				&:hover {
+					cursor: pointer;
+					background: #577aff;
+					color: #fff;
+				}
+			}
+		}
+	}
+}
