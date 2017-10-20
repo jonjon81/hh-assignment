@@ -60,6 +60,28 @@
 	}
 }
 
+a.anotherChild {
+	border: 2px solid #577aff;
+	padding: 15px 25px;
+	font-size: 16px;
+	background: #fff;
+	border-radius: 4px;
+	width: 100%;
+	max-width: 300px;
+	transition: all 250ms ease;
+	width: auto;
+	text-decoration: none;
+	color: #000;
+	position: absolute;
+	margin-top: 15px;
+	&:hover {
+		cursor: pointer;
+		background: #577aff;
+		color: #fff;
+	}
+
+}
+
 @include media('>960px') {
 	.App {
 		> .welcome-message {

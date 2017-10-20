@@ -36,10 +36,10 @@ const RegistrationForm = props => {
     handleChange,
   } = props;
   return (
-    <form onSubmit={ handleSubmit }>
+    <form id='mainForm' onSubmit={ handleSubmit }>
       <input className='question' spellCheck='false' type='text' required  placeholder='name' name='name' onChange={ handleChange } />
       <input className='question' spellCheck='false' type='email' required  placeholder='email' name='email'  onChange={ handleChange } />
-      <button type='submit' className='submit'>
+      <button className='submit' type='submit'>
         Submit
       </button>
     </form>
@@ -56,7 +56,7 @@ const DataContainer = props => {
   return (
     <div className='data-container'>
       <header>
-        User Details
+        Child Registration:
       </header>
       <div className='container'>
         {
@@ -67,6 +67,8 @@ const DataContainer = props => {
           error &&
           <ErrorBox error={ error } />
         }
+
+        <a href='/' className='anotherChild'>Enter another child</a>
       </div>
     </div>
   )
@@ -146,6 +148,7 @@ class App extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault();
+    console.log("almost there!");
     fetch(`${API_URL}/entries`, {
       method: 'POST',
       headers: {
@@ -191,6 +194,7 @@ class App extends Component {
     })
 
   }
+
   render() {
     const {
       welcomeMessage,
