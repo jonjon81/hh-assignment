@@ -46,20 +46,23 @@ a.anotherChild {
   border: 2px solid #577aff;
   padding: 15px 25px;
   font-size: 16px;
-  background: #fff;
+  background: #577aff;
   border-radius: 4px;
-  width: 100%;
-  max-width: 300px;
   transition: all 250ms ease;
-  width: auto;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
   text-decoration: none;
-  color: #000;
+  color: #fff;
   position: absolute;
-  margin-top: 15px; }
+  left: 50%;
+  text-align: center;
+  margin-top: 20px;
+  width: 100%;
+  max-width: 300px; }
   a.anotherChild:hover {
     cursor: pointer;
-    background: #577aff;
-    color: #fff; }
+    background: #fff;
+    color: #000; }
 
 @media (min-width: 961px) {
   .App > .welcome-message {
@@ -80,3 +83,15 @@ a.anotherChild {
         cursor: pointer;
         background: #577aff;
         color: #fff; } }
+
+@media (max-width: 499px) {
+  .data-container {
+    margin-left: 0 !important;
+    transform: none !important; } }
+
+.data-container {
+  max-width: 500px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  text-align: center; }

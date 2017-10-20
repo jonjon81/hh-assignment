@@ -68,7 +68,7 @@ const DataContainer = props => {
           <ErrorBox error={ error } />
         }
 
-        <a href='/' className='anotherChild'>Enter another child</a>
+        <a href='/' className='anotherChild'>Try another child</a>
       </div>
     </div>
   )
